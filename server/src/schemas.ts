@@ -1,10 +1,6 @@
 import { buildSchema } from 'graphql';
 
 export const userSchema = buildSchema(`
-input UserInput {
-   username: String,
-   password: String,
-}
 
 type Token {
    value: String
@@ -24,7 +20,7 @@ type Query {
 }
 
 type Mutation {
-   create(user: UserInput): User,
+   create(username: String, password: String): User,
    login(username : String, password: String): Token
 }
 `);

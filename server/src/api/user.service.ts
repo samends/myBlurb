@@ -13,13 +13,13 @@ export class UserService {
         @inject(TYPES.HashService) private hashService: HashService,
     ) { }
 
-    async create(user: UserModel): Promise<Users> {
+    async create({username, password}): Promise<Users> {
 
         return new Promise(async (res, reject) => {
             try {
                 const newUser = new Users();
-                newUser.username = user.username;
-                newUser.password = await this.hashService.genHash(user.password);
+                newUser.username = username;
+                newUser.password = await this.hashService.genHash(password);
 
                 const createdUser = await this.connectionService.createUser(newUser);
                 res(createdUser[0]);

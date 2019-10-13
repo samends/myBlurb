@@ -17,9 +17,9 @@ const hashService = container.resolve<HashService>(HashService);
 
 const root = {
    hello: () => 'Hello world!',
-   create: async ({input}) => {
+   create: async (user) => {
       try {
-         return await userService.create(input);
+         return await userService.create(user);
       } catch (error) {
          console.log('There was an error', error);
       }
@@ -36,7 +36,7 @@ const root = {
                expires: moment(new Date()).add(5, 'days').unix()
              },
             `secret${user.tokenSecret}`);
-            return {value: token};
+            return {Authorization: token};
          } else {
             return Error('Wrong username or password');
          }
