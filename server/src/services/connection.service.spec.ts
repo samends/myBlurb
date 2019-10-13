@@ -1,5 +1,5 @@
 import { ConnectionService } from './connection.service';
-import { Habits, Users } from '../entity';
+import { Users } from '../entity';
 import { dbUser, user } from '../test/fixtures';
 
 describe('ConnectionService', () => {
@@ -32,7 +32,6 @@ describe('ConnectionService', () => {
                 password: 'greenCats',
                 database: 'redCats',
                 entities: [
-                    Habits,
                     Users
                 ],
                 synchronize: true,

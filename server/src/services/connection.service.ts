@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import {Habits, Users} from '../entity';
+import {Users} from '../entity';
 import {UserModel} from '../models/user';
 import {injectable, inject} from 'inversify';
 import TYPES from '../types';
@@ -20,7 +20,6 @@ export class ConnectionService {
                 password: process.env.PGPASSWORD,
                 database: process.env.PGDATABASE,
                 entities: [
-                    Habits,
                     Users,
                 ],
                 synchronize: true,
