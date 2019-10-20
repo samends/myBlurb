@@ -1,0 +1,22 @@
+{
+  "name": "myblurb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/samez/myblurb.git"
+  },
+  "author": "Sam Menza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/samez/myblurb/issues"
+  },
+  "homepage": "https://gitlab.com/samez/myblurb#readme",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
