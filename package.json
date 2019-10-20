@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "precommit": "lint-staged",
     "prettier": "prettier --write \"*/src/**/*.{ts,tsx,css}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{ts,tsx,css}": [
