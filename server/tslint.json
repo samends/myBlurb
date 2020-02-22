@@ -13,5 +13,8 @@
        "interface-name": false,
        "trailing-comma": false
     },
-    "rulesDirectory": []
+    "rulesDirectory": [],
+    "excludes": [
+       "node_modules"
+    ]
  }

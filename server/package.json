@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc -w && npm run lint",
+    "build": "tsc -w && npm run eslint",
     "clean": "rimraf .dist",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "tsc": "tsc",
@@ -22,6 +22,7 @@
     "@types/pg": "^7.4.11",
     "bcrypt": "^3.0.3",
     "dotenv": "^6.2.0",
+    "eslint": "^6.7.2",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
@@ -37,7 +38,7 @@
     "jasmine": "^3.3.1",
     "rimraf": "^2.6.3",
     "ts-node": "^7.0.1",
-    "tslint": "^5.12.1",
+    "tslint": "^5.18.0",
     "typescript": "^3.4.3",
     "typescript-eslint-parser": "^22.0.0"
   }

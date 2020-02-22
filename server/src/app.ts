@@ -76,7 +76,7 @@ const root = {
 const app = express();
 app.use(sampleMiddleware);
 app.use(
-	'/data',
+	'/api',
 	graphqlHTTP({
 		schema: userSchema,
 		rootValue: root,
